@@ -32,9 +32,9 @@ public class Graph : MonoBehaviour {
 
         nodes = new Node[m_width, m_height];
 
-        for (int i = 0; i < m_width; i++)
+        for (int j = 0; j < m_height; j++)
         {
-            for (int j = 0; j < m_height; j++)
+            for (int i = 0; i < m_width; i++)
             {
                 NodeType type = (NodeType)mapData[i, j];
                 Node newNode = new Node(i, j, type);
@@ -48,9 +48,9 @@ public class Graph : MonoBehaviour {
                 }
             }
         }
-        for (int i = 0; i < m_width; i++)
+        for (int j = 0; j < m_height; j++)
         {
-            for (int j = 0; j < m_height; j++)
+            for (int i = 0; i < m_width; i++)
             {
                 if(nodes[i, j].nodeType != NodeType.Blocked)
                 {
